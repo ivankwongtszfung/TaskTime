@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebStorm first program</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="jquery-dragarrange-master/drag-arrange.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="jumbotron text-center">
+    <h1>Task Timer</h1>
+    <p>Just paste all information there</p>
+</div>
+<div class="container">
+    <div class="alert alert-warning" id="error" style="display:none;">
+        <strong>Warning!</strong> please give some description about the task.
+    </div>
+    <div class="col-sm-12" id="panel">
+        <input type="text" class="form-control" id="usr" placeholder="Task Name" required>
+        <button type="button" class="btn btn-primary active" id="add" style="width:100%;">Add Timer</button>
+    </div>
+</div>
+<div class="container">
+    <div class="timer" >
+        <div class='col-sm-4 tile instruction'>
+            <h3 class='description'>Left Click</h3>
+            <h3 class='detail'>Stop</h3>
+        </div>
+        <div class='col-sm-4 tile instruction'>
+            <h3 class='description'>Right Click Delete</h3>
+            <h3 class='detail'>if stop timming</h3>
+        </div>
+        <div class='col-sm-4 tile instruction'>
+            <h3 class='description'>Drag & Drop</h3>
+            <h3 class='detail'>Arrange</h3>
+        </div>
+    </div>
+</div>
+</body>
+<script src="footer.js"></script>
+</html>

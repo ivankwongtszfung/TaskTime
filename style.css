@@ -1,0 +1,69 @@
+div#task.col-sm-4,.tile{
+    border-color: #007299;
+    border: 2px solid #0099cc;
+    border-radius: 10px;
+    color: #0099cc;
+    box-shadow: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: block;
+}
+#add{
+    height: 50px;
+    font-size: 25px;
+}
+div#task.col-sm-4:hover,.tile:hover{
+    color: #fff;
+    background-color: #00FF7F;
+    border-color: #007299;
+    cursor: pointer;
+}
+div#task.col-sm-4:active,.tile:active{
+    color: #fff;
+    background-color: #3276b1;
+    border: 2px solid #000;
+}
+#stoppedTask{
+    color: #fff;
+    background-color: #3276b1;
+    border: 2px solid #000;
+    box-shadow: none;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#stoppedTask:hover {
+    color: #fff;
+    background-color: #00FF7F;
+    border-color: #007299;
+    cursor: pointer;
+}
+
+div#panel.col-sm-12{
+    margin-bottom: 10px;
+    padding:0px;
+}
+
+
+#elements-container {
+    text-align: center;
+}
+
+.draggable-element {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background: white;
+    border: 1px solid rgb(196, 196, 196);
+    line-height: 200px;
+    text-align: center;
+    margin: 10px;
+    color: rgb(51, 51, 51);
+    font-size: 30px;
+    cursor: move;
+}
+#rubbish{
+    border: 2px solid black;
+
+}
