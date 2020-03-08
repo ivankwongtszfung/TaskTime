@@ -29,19 +29,46 @@ function myTimer(){
             else if(hours!=0){
                 this.innerHTML= hours + " hr " + minutes + " min " + sec + " s";
             }
-        else if(minutes!=0){
-            this.innerHTML= minutes + " min " + sec + " s";
+            else if(minutes!=0){
+                this.innerHTML= minutes + " min " + sec + " s";
+            }
+            else{
+                this.innerHTML=  sec + " s";
+            }
         }
         else{
-            this.innerHTML=  sec + " s";
+            var diff=Obj[i]["base"];
+            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            var sec=Math.floor((diff % (1000 * 60)) / 1000);
+            if(sec<10) {
+                sec = "0" + sec;
+            }
+            if(days!=0){
+                this.innerHTML= days + " day " + hours + " hr " + minutes + " min " + sec + " s";
+            }
+            else if(hours!=0){
+                this.innerHTML= hours + " hr " + minutes + " min " + sec + " s";
+            }
+            else if(minutes!=0){
+                this.innerHTML= minutes + " min " + sec + " s";
+            }
+            else{
+                this.innerHTML=  sec + " s";
+            }
+            
         }
-    }
     });
 }
 
 function addTile(count){
-    
-    $(".timer").append("<div class='col-sm-4 tile' id='task'><h3 class='description'>"+Obj[count]["title"]+"</h3> <h3 class='time' id='"+(count)+"'>start!!!!</h3> </div>");
+    if( conObj[count] ){
+        $(".timer").append("<div class='col-sm-4 tile' id='task'><h3 class='description'>"+Obj[count]["title"]+"</h3> <h3 class='time' id='"+(count)+"'>start!!!!</h3> </div>");
+    }
+    else{
+        $(".timer").append("<div class='col-sm-4 tile' id='stoppedTask'><h3 class='description'>"+Obj[count]["title"]+"</h3> <h3 class='time' id='"+(count)+"'>start!!!!</h3> </div>");
+    }
 
 }
 
@@ -65,6 +92,8 @@ $(document).ready(function(){
                 addTile(Obj[key].id);
             }
         }
+
+        myTimer()
 
     }
     else{
